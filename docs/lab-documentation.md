@@ -545,3 +545,17 @@ The guest client was isolated from the employee WLAN network, and the firewall l
 Suricata detected Nmap scanning activity from the WLAN client and generated IDS alerts.
 
 The lab also showed the importance of managing Hyper-V internal switch adapters on the host machine to prevent the host from being unintentionally affected by lab network behavior.
+
+---
+
+## 12. Conclusion
+
+This lab demonstrated how a simulated wireless company network can be secured using OPNsense, Hyper-V, Captive Portal authentication, firewall rules, guest network isolation and Suricata IDS monitoring.
+
+The WLAN client was able to authenticate through Captive Portal, and incorrect login attempts were denied. After successful authentication, the client was allowed network access, which confirmed that the simulated wireless authentication worked as expected.
+
+The Guest_WLAN network was successfully isolated from the employee WLAN network. The guest client could not reach the WLAN gateway, and the firewall log confirmed that the traffic was blocked by the rule `Block Guest to WLAN`.
+
+Suricata also detected the Nmap scan from the WLAN client and generated `ET SCAN Possible Nmap` alerts. Since Suricata was running in IDS mode, the traffic was detected and logged but not blocked.
+
+Overall, the lab showed how authentication, segmentation, firewall rules and IDS monitoring can work together to improve wireless network security in a virtual lab environment.
