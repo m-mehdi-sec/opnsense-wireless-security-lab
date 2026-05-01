@@ -180,20 +180,71 @@ The ping failed with 100% packet loss, and the firewall log confirmed that the t
 
 ## Screenshots
 
-Recommended screenshots for this repository:
+### 1. OPNsense Interfaces Overview
 
-| Screenshot | Description |
-|---|---|
-| images/01-opnsense-interfaces.png | OPNsense interface overview |
-| images/02-dhcp-ranges.png | DHCP ranges for WLAN and Guest_WLAN |
-| images/03-wlan-firewall-rules.png | WLAN firewall rules |
-| images/04-guest-wlan-firewall-rules.png | Guest_WLAN firewall rules |
-| images/05-captive-portal-login.png | Captive Portal login page |
-| images/06-authentication-failed.png | Failed login attempt |
-| images/07-successful-login.png | Successful Captive Portal login |
-| images/08-suricata-nmap-alert.png | Suricata Nmap alert |
-| images/09-guest-ping-blocked.png | Guest client blocked from WLAN |
-| images/10-firewall-live-view-block.png | Firewall log showing blocked Guest_WLAN traffic |
+![OPNsense Interfaces Overview](images/01-opnsense-interfaces.png)
+
+Shows the configured OPNsense interfaces, including LAN, WLAN, and Guest_WLAN with their assigned IP networks.
+
+### 2. DHCP Ranges
+
+![DHCP Ranges](images/02-dhcp-ranges.png)
+
+Shows the DHCP ranges configured for LAN, WLAN, and Guest_WLAN.
+
+### 3. WLAN Firewall Rules
+
+![WLAN Firewall Rules](images/03-wlan-firewall-rules.png)
+
+Shows the WLAN firewall rules allowing WLAN users to access the network and blocking unauthorized access to WLAN.
+
+### 4. Guest_WLAN Firewall Rules
+
+![Guest_WLAN Firewall Rules](images/04-guest-wlan-firewall-rules.png)
+
+Shows the Guest_WLAN firewall rules where guest traffic to WLAN is blocked before general internet access is allowed.
+
+### 5. Captive Portal Login
+
+![Captive Portal Login](images/05-captive-portal-login.png)
+
+Shows the OPNsense Captive Portal login page presented to the WLAN client before authentication.
+
+### 6. Authentication Failed
+
+![Authentication Failed](images/06-authentication-failed.png)
+
+Shows a failed Captive Portal login attempt where incorrect credentials were denied.
+
+### 7. Successful Captive Portal Login
+
+![Successful Captive Portal Login](images/07-successful-login.png)
+
+Shows a successful Captive Portal login with an active authenticated session.
+
+### 8. Suricata Nmap Alert
+
+![Suricata Nmap Alert](images/08-suricata-nmap-alert.png)
+
+Shows Suricata IDS alerts detecting Nmap scan activity from the WLAN client.
+
+### 9. Guest Ping Blocked
+
+![Guest Ping Blocked](images/09-guest-ping-blocked.png)
+
+Shows the Guest_WLAN client failing to ping the WLAN gateway, confirming network isolation.
+
+### 10. Firewall Live View Block
+
+![Firewall Live View Block](images/10-firewall-live-view-block.png)
+
+Shows OPNsense firewall logs blocking ICMP traffic from Guest_WLAN to WLAN.
+
+### 11. Captive Portal UDP Block
+
+![Captive Portal UDP Block](images/11-captive-portal-udp-block.png)
+
+Shows the Captive Portal default block rule blocking unauthenticated UDP/DNS traffic from the WLAN client.
 
 ---
 
