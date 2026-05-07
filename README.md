@@ -263,7 +263,7 @@ Detailed lab documentation, including:
 
 See:
 
-docs/lab-documentation.md
+[Lab Documentation](docs/lab-documentation.md)
 
 ---
 
